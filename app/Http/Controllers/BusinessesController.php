@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Request;
 //use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -19,16 +18,16 @@ class BusinessesController extends Controller {
     }
 
     public function create() {
-        return view('createBusiness');
+        
+        $categories=\App\Category::lists('name', 'id');
+        
+        return view('createBusiness', compact('categories'));
     }
 
-    public function store() {
+    public function store(Requests\CreateBusinessRequest $request) {
 
-        $input = Request::all();
+        $input = $request->all();
         
-        $input['category_id']=1;
-//        return $input;
-
         Business::create($input);
 
         return redirect('kohteet');

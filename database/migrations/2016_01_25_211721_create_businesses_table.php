@@ -20,8 +20,8 @@ class CreateBusinessesTable extends Migration {
             $table->string('city');
             $table->string('phone');
             $table->string('website');
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->decimal('latitude',20,16);
+            $table->decimal('longitude',20,16);
             $table->timestamps();
 
             $table->foreign('category_id')

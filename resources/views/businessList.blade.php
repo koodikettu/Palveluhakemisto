@@ -35,7 +35,7 @@
     <tr>
         <td>{{$business->id}}</td>
         <td>{{$business->name}}</td>
-        <td>{{$business->category_id}}</td>
+        <td>{{$business->category->name}}</td>
         <td>{{$business->streetAddress}}, {{$business->zipCode}} {{$business->city}}</td>
         <td>{{$business->phone}}</td>
         <td><a href="http://{{$business->website}}" target="_blank">{{$business->website}}</a></td>

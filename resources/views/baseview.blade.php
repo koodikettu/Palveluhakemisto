@@ -16,6 +16,7 @@
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.js"></script>
+        @yield('scripts')
 
     </body>
 </html>
