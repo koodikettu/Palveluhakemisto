@@ -5,32 +5,25 @@
 <div class="row">
     <div class="col-md-12">
 
-        <h3>Home</h3>
+        <h3>Kategoria: {{ $category->name }}</h3>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-2">
-        <h3>Kategoriat</h3>
-        @foreach($categories as $category)
-        <p><a href="/kategoriat/{{ $category->id}}"> {{ $category->name }} </a></p>
-        @endforeach
-    </div>
     <div class="col-md-6">
         <h3>Kartta</h3>
         <div id="kartta" style="width: 100%; height: 500px;">
         </div>
 
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <h2>Yritykset</h2>
-        @for($i=0;$i<count($businesses);$i++)
-            <h3>{{ $i + 1 }}. <a href="/kohteet/{{ $businesses[$i]->id }}"> {{ $businesses[$i]->name }}</a></h3>
+        @for($i=0;$i<count($businessList);$i++)
+            <h3>{{ $i + 1 }}. <a href="/kohteet/{{ $businessList[$i]->id }}"> {{ $businessList[$i]->name }}</a></h3>
             <p>
-                {{ $businesses[$i]->streetAddress}}<br>
-                <small>Kategoria: <a href="/kategoriat/{{ $businesses[$i]->category->id }}"> {{ $businesses[$i]->category->name }}</a></small>
+                {{ $businessList[$i]->streetAddress}}<br>
+                <small>Kategoria: <a href="/kategoriat/{{ $businessList[$i]->category->id }}"> {{ $businessList[$i]->category->name }}</a></small>
             </p>
             @endfor
-
     </div>
 </div>
 
@@ -53,7 +46,7 @@ var koord;
 var geocoder;
 var markers = [];
 var bounds = new google.maps.LatLngBounds();
-var data = '{!! $businesses !!}';
+var data = '{!! $businessList !!}';
 var karttadata = JSON.parse(data);
 
 console.log(karttadata);
@@ -129,4 +122,3 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 @endsection
-
