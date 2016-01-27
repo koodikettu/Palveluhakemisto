@@ -27,8 +27,10 @@
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'FrontPageController@index');
-    
-    
+
+    Route::get('yllapito', 'FrontPageController@admin');
+
+
 
     Route::get('kategoriat', 'CategoriesController@index');
 
@@ -41,6 +43,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('kategoriat/{id}/edit', 'CategoriesController@edit');
 
     Route::patch('kategoriat/{id}', 'CategoriesController@update');
+    
 
 
 
@@ -56,4 +59,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('kohteet/{id}/edit', 'BusinessesController@edit');
 
     Route::patch('kohteet/{id}', 'BusinessesController@update');
+    
+    Route::post('kohteet/{id}/delete', 'BusinessesController@delete');
+    
 });

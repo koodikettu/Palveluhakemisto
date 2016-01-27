@@ -11,11 +11,11 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="infobox">
             <h3>Kategoriat</h3>
             @foreach($categories as $category)
-            <p><a href="/kategoriat/{{ $category->id}}"> {{ $category->name }} </a></p>
+            <p><a href="/kategoriat/{{ $category->id}}"> {{ $category->name }} ({{count($category->businesses)}})</a></p>
             @endforeach
         </div>
     </div>
@@ -27,7 +27,7 @@
         </div>
 
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="infobox">
             <h2>Uusimmat kohteet</h2>
             @for($i=0;$i<count($businesses);$i++)

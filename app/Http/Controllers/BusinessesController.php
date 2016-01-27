@@ -59,4 +59,10 @@ class BusinessesController extends Controller {
         return redirect('kohteet');
     }
 
+    public function delete($id) {
+        $business = Business::findOrFail($id);
+        $business->delete();
+        return redirect('kohteet');
+    }
+
 }

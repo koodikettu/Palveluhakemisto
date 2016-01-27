@@ -35,4 +35,6 @@
 
     @endforeach
 </table>
+
+<a class="btn btn-primary" href="kategoriat/uusi">Uusi kategoria</a>
 @stop

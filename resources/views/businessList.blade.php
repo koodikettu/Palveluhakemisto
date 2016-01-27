@@ -45,8 +45,20 @@
                 <span class="glyphicon glyphicon-edit"></span> Muokkaa
             </a>
         </td>
+        <td>
+            {!! Form::open(['url' => 'kohteet/' . $business->id . '/delete']) !!}
+                <button class="btn btn-danger btn-sm" type="submit">
+                    <span class="glyphicon glyphicon-trash"></span> Poista
+                </button>
+            {!! Form::close() !!}
+            
+            
+           
+        </td>
     </tr>
 
     @endforeach
 </table>
+
+<a class="btn btn-primary" href="kohteet/uusi">Uusi kohde</a>
 @stop
