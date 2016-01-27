@@ -27,6 +27,8 @@
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'HomeController@index');
+    
+    
 
     Route::get('kategoriat', 'CategoriesController@index');
 
@@ -35,6 +37,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('kategoriat', 'CategoriesController@store');
 
     Route::get('kategoriat/{id}', 'CategoriesController@show');
+
+    Route::get('kategoriat/{id}/edit', 'CategoriesController@edit');
+
+    Route::patch('kategoriat/{id}', 'CategoriesController@update');
 
 
 

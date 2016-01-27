@@ -26,7 +26,8 @@
             </th>
             <th>
                 nettisivu
-            </th>
+            </th
+            <th></th>
 
         </tr>
     </thead>
@@ -39,6 +40,11 @@
         <td>{{$business->streetAddress}}, {{$business->zipCode}} {{$business->city}}</td>
         <td>{{$business->phone}}</td>
         <td><a href="http://{{$business->website}}" target="_blank">{{$business->website}}</a></td>
+        <td>
+            <a class="btn btn-primary btn-sm" href="kohteet/{{$business->id}}/edit">
+                <span class="glyphicon glyphicon-edit"></span> Muokkaa
+            </a>
+        </td>
     </tr>
 
     @endforeach

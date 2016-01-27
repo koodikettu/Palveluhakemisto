@@ -95,7 +95,7 @@
 
         <div class="form-group">
 
-            {!! Form::submit('Lisää kohde', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Tallenna', ['class' => 'btn btn-primary']) !!}
 
         </div>
 

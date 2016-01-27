@@ -40,4 +40,21 @@ class CategoriesController extends Controller {
         return view('category', compact('category', 'businessList'));
     }
 
+    public function edit($id) {
+
+        $category = Category::findOrFail($id);
+
+
+        return view('editCategory', compact('category'));
+    }
+
+    public function update($id, Requests\CreateCategoryRequest $request) {
+
+        $category = Category::findOrFail($id);
+
+        $category->update($request->all());
+
+        return redirect('kategoriat');
+    }
+
 }
