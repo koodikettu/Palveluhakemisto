@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="infobox">
 
-        <h3>Kategoria: {{ $category->name }}</h3>
+            <h1><a href="/">Palveluhakemisto</a>: {{ $category->name }}</h1>
         </div>
     </div>
 </div>

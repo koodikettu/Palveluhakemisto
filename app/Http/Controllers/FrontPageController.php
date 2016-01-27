@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Category;
 use App\Business;
 
-class HomeController extends Controller
+class FrontPageController extends Controller
 {
     public function index() {
         

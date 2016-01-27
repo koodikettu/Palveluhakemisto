@@ -29,7 +29,7 @@
     </div>
     <div class="col-md-4">
         <div class="infobox">
-            <h2>Yritykset</h2>
+            <h2>Uusimmat kohteet</h2>
             @for($i=0;$i<count($businesses);$i++)
                 <h3>{{ $i + 1 }}. <a href="/kohteet/{{ $businesses[$i]->id }}"> {{ $businesses[$i]->name }}</a></h3>
                 <p>
