@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Business;
+use App\Http\Requests\BusinessRequest;
 
 class BusinessesController extends Controller {
 
@@ -24,7 +25,7 @@ class BusinessesController extends Controller {
         return view('createBusiness', compact('categories'));
     }
 
-    public function store(Requests\CreateBusinessRequest $request) {
+    public function store(BusinessRequest $request) {
 
         $input = $request->all();
 
@@ -37,9 +38,25 @@ class BusinessesController extends Controller {
 
         $business = Business::findOrFail($id);
 
-
-
         return view('business', compact('business'));
+    }
+
+    public function edit($id) {
+
+        $business = Business::findOrFail($id);
+
+        $categories = \App\Category::lists('name', 'id');
+
+        return view('editBusiness', compact('business', 'categories'));
+    }
+
+    public function update($id, BusinessRequest $request) {
+
+        $business = Business::findOrFail($id);
+
+        $business->update($request->all());
+
+        return redirect('kohteet');
     }
 
 }

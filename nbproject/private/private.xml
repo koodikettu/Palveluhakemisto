@@ -8,6 +8,7 @@
             <file>file:/C:/Laravel/palveluhakemisto/resources/views/createBusiness.blade.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/public/main.css</file>
             <file>file:/C:/Laravel/palveluhakemisto/app/Category.php</file>
+            <file>file:/C:/Laravel/palveluhakemisto/resources/views/business.blade.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/resources/views/welcome.blade.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/app/Business.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/public/index.php</file>
@@ -17,13 +18,16 @@
             <file>file:/C:/Laravel/palveluhakemisto/resources/assets/sass/app.scss</file>
             <file>file:/C:/Laravel/palveluhakemisto/app/Http/Controllers/BusinessesController.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/app/Http/Controllers/CategoriesController.php</file>
+            <file>file:/C:/Laravel/palveluhakemisto/storage/framework/views/14d52c64d5b70099885d11a0984c224a044a8b61.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/database/migrations/2016_01_25_201118_create_categories_table.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/database/migrations/2014_10_12_000000_create_users_table.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/app/Http/Requests/CreateCategoryRequest.php</file>
+            <file>file:/C:/Laravel/palveluhakemisto/storage/framework/views/29a54f3dd1aa815239b1616893b8fc44565f7483.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/resources/views/home.blade.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/.gitattributes</file>
             <file>file:/C:/Laravel/palveluhakemisto/config/app.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/app/Http/Requests/CreateBusinessRequest.php</file>
+            <file>file:/C:/Laravel/palveluhakemisto/resources/views/category.blade.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/.gitignore</file>
             <file>file:/C:/Laravel/palveluhakemisto/resources/views/businessList.blade.php</file>
             <file>file:/C:/Laravel/palveluhakemisto/database/migrations/2016_01_25_211721_create_businesses_table.php</file>

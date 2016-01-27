@@ -11,23 +11,30 @@
 <div class="row">
 
     <div class="col-md-4">
-        <h3>{{ $business->name }}</h3>
-        <p>Kategoria: <a href="/kategoriat/{{$business->category->id}}">{{$business->category->name}}</a></p>
-        
-        <p>
-            {{$business->streetAddress}}<br>
-            {{$business->zipCode}} {{$business->city}}<br>
-            <span class="glyphicon glyphicon-earphone"></span>
-            {{$business->phone}}<br>
-            <a href="http://{{$business->website}}" target="_blank">{{$business->website}}</a><br>
-        </p>
+        <div class="infobox">
+            <h3>{{ $business->name }}</h3>
+            <p>Kategoria: <a href="/kategoriat/{{$business->category->id}}">{{$business->category->name}}</a></p>
 
+            <p>
+                {{$business->streetAddress}}<br>
+                {{$business->zipCode}} {{$business->city}}<br>
+                <span class="glyphicon glyphicon-earphone"></span>
+                {{$business->phone}}<br>
+                <a href="http://{{$business->website}}" target="_blank">{{$business->website}}</a><br>
+            </p>
+            
+            <p>
+                Päivitetty: {{$business->updated_at->format('d.m.Y')}}
+            </p>
 
+        </div>
 
     </div>
     <div class="col-md-8">
-        <h3>Kartta</h3>
-        <div id="kartta" style="width: 100%; height: 500px;">
+        <div class="infobox">
+            <h3>Kartta</h3>
+            <div id="kartta" style="width: 100%; height: 500px;">
+            </div>
         </div>
 
     </div>
@@ -42,11 +49,11 @@
 @section('scripts')
 
 <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD2jhh23EW49Tp--c2rydoIbur0wziU1us&language=fi&region=FI">
-    </script>
-    <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/styledmarker/src/StyledMarker.js"></script>
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD2jhh23EW49Tp--c2rydoIbur0wziU1us&language=fi&region=FI">
+</script>
+<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/styledmarker/src/StyledMarker.js"></script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
 
 
@@ -76,7 +83,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-    </script>
+</script>
 
 
 

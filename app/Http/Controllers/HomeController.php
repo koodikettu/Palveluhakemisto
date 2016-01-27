@@ -15,7 +15,7 @@ class HomeController extends Controller
         
        $categories = Category::all();
        
-       $businesses = Business::all();
+       $businesses = Business::latest()->take(8)->get();
        
        
        return view('home', compact('categories', 'businesses'));

@@ -36,6 +36,9 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('kategoriat/{id}', 'CategoriesController@show');
 
+
+
+
     Route::get('kohteet', 'BusinessesController@index');
 
     Route::get('kohteet/uusi', 'BusinessesController@create');
@@ -43,4 +46,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('kohteet', 'BusinessesController@store');
 
     Route::get('kohteet/{id}', 'BusinessesController@show');
+
+    Route::get('kohteet/{id}/edit', 'BusinessesController@edit');
+
+    Route::patch('kohteet/{id}', 'BusinessesController@update');
 });

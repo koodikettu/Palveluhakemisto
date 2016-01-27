@@ -4,18 +4,23 @@
 
 <div class="row">
     <div class="col-md-12">
+        <div class="infobox">
 
         <h3>Kategoria: {{ $category->name }}</h3>
+        </div>
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
+        <div class="infobox">
         <h3>Kartta</h3>
         <div id="kartta" style="width: 100%; height: 500px;">
+        </div>
         </div>
 
     </div>
     <div class="col-md-6">
+        <div class="infobox">
         <h2>Yritykset</h2>
         @for($i=0;$i<count($businessList);$i++)
             <h3>{{ $i + 1 }}. <a href="/kohteet/{{ $businessList[$i]->id }}"> {{ $businessList[$i]->name }}</a></h3>
@@ -24,6 +29,7 @@
                 <small>Kategoria: <a href="/kategoriat/{{ $businessList[$i]->category->id }}"> {{ $businessList[$i]->category->name }}</a></small>
             </p>
             @endfor
+        </div>
     </div>
 </div>
 
