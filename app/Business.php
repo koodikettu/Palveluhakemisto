@@ -9,6 +9,7 @@ class Business extends Model {
     protected $fillable = [
         'name',
         'category_id',
+        'description',
         'streetAddress',
         'zipCode',
         'city',

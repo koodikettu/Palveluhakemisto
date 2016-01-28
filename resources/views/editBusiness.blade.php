@@ -39,6 +39,15 @@
 
         <div class="form-group">
 
+            {!! Form::label('description', 'Kohteen kuvaus:') !!}
+
+            {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+
+        </div>
+
+
+        <div class="form-group">
+
             {!! Form::label('streetAddress', 'Katuosoite:') !!}
 
             {!! Form::text('streetAddress', null, ['class' => 'form-control', 'onChange' => 'sijoitaKartalle()']) !!}
@@ -128,14 +137,14 @@
             function initialize() {
             geocoder = new google.maps.Geocoder();
                     var mapOptions = {
-                    center: {lat: {{ $business-> latitude }}, lng: {{ $business-> longitude }} },
+                    center: {lat: {{ $business - > latitude }}, lng: {{ $business - > longitude }} },
                             zoom: 15
                     };
                     map = new google.maps.Map(document.getElementById('kartta'),
                             mapOptions);
                     marker = new google.maps.Marker({
                     map: map,
-                            position: {lat: {{ $business-> latitude }}, lng: {{ $business-> longitude }} },
+                            position: {lat: {{ $business - > latitude }}, lng: {{ $business - > longitude }} },
                             draggable: true
                     });
                     google.maps.event.addListener(marker, 'dragend', function (evt) {

@@ -22,6 +22,9 @@
                 {{$business->phone}}<br>
                 <a href="http://{{$business->website}}" target="_blank">{{$business->website}}</a><br>
             </p>
+            <p>
+                {{$business->description}}
+            </p>
             
             <p>
                 Päivitetty: {{$business->updated_at->format('d.m.Y')}}

@@ -11,43 +11,44 @@
     </head>
     <body>
         <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
+<!--            <div class="container-fluid">-->
+                <div class="container">
 
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Sovelluksen nimi -->
-                    <a class="navbar-brand" href="/">Palveluhakemisto</a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Sovelluksen nimi -->
+<!--                        <a class="navbar-brand" href="/">Palveluhakemisto</a>-->
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="nav navbar-nav">
+                            <!-- Navigaation linkit -->
+                            <li><a href="/">Etusivu</a></li>
+                            <li><a href="/yllapito">Ylläpito</a></li>
+
+                        </ul>
+
+
+
+
+<!--                        <form class="navbar-form navbar-right" method="post" action="/logout">
+                            <button type="submit" class="btn btn-default">Kirjaudu ulos</button>
+
+                        </form>
+                        <p class="navbar-text navbar-right">Käyttäjä: </p>
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="kirjautuminen">Kirjaudu sisään</a></li>
+                        </ul>-->
+
+                    </div>
                 </div>
-
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="nav navbar-nav">
-                        <!-- Navigaation linkit -->
-                        <li><a href="/">Etusivu</a></li>
-                        <li><a href="/yllapito">Ylläpito</a></li>
-
-                    </ul>
-
-
-
-
-                    <form class="navbar-form navbar-right" method="post" action="/logout">
-                        <button type="submit" class="btn btn-default">Kirjaudu ulos</button>
-
-                    </form>
-                    <p class="navbar-text navbar-right">Käyttäjä: </p>
-
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="kirjautuminen">Kirjaudu sisään</a></li>
-                    </ul>
-
-                </div>
-            </div>
         </nav>
 
         <div class="container">

@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="infobox">
 
-        <h3>Etusivu</h3>
+        <h1>Palveluhakemisto: Etusivu</h1>
         </div>
     </div>
 </div>

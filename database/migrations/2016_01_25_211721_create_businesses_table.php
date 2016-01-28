@@ -15,6 +15,7 @@ class CreateBusinessesTable extends Migration {
             $table->increments('id');
             $table->string('name');
             $table->integer('category_id')->unsigned();
+            $table->text('description');
             $table->string('streetAddress');
             $table->string('zipCode');
             $table->string('city');

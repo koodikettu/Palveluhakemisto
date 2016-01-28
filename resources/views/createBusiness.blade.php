@@ -39,6 +39,14 @@
 
         <div class="form-group">
 
+            {!! Form::label('description', 'Kohteen kuvaus:') !!}
+
+            {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+
+        </div>
+
+        <div class="form-group">
+
             {!! Form::label('streetAddress', 'Katuosoite:') !!}
 
             {!! Form::text('streetAddress', null, ['class' => 'form-control', 'onChange' => 'sijoitaKartalle()']) !!}
