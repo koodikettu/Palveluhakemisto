@@ -134,17 +134,19 @@
             var map;
             var geocoder;
             var marker;
+            var blat=parseFloat(document.getElementById('latitude').value);
+            var blng=parseFloat(document.getElementById('longitude').value);
             function initialize() {
             geocoder = new google.maps.Geocoder();
                     var mapOptions = {
-                    center: {lat: {{ $business - > latitude }}, lng: {{ $business - > longitude }} },
+                    center: {lat: blat, lng: blng },
                             zoom: 15
                     };
                     map = new google.maps.Map(document.getElementById('kartta'),
                             mapOptions);
                     marker = new google.maps.Marker({
                     map: map,
-                            position: {lat: {{ $business - > latitude }}, lng: {{ $business - > longitude }} },
+                            position: {lat: blat, lng: blng },
                             draggable: true
                     });
                     google.maps.event.addListener(marker, 'dragend', function (evt) {
