@@ -32,7 +32,7 @@
         <div class="infobox">
             <h2>Uusimmat kohteet</h2>
             @for($i=0;$i<count($businesses);$i++)
-                <h3>{{ $i + 1 }}. <a href="/kohteet/{{ $businesses[$i]->id }}"> {{ $businesses[$i]->name }}</a></h3>
+                <h4>{{ $i + 1 }}. <a href="/kohteet/{{ $businesses[$i]->id }}"> {{ $businesses[$i]->name }}</a></h4>
                 <p>
                     {{ $businesses[$i]->streetAddress}}<br>
                     <small>Kategoria: <a href="/kategoriat/{{ $businesses[$i]->category->id }}"> {{ $businesses[$i]->category->name }}</a></small>
