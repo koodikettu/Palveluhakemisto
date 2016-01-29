@@ -4,11 +4,13 @@
 
 <div class="row">
     <div class="col-md-12">
+        <div class="infobox">
 
         <h1>{{ $business->name }}</h1>
         <a href="/">Palveluhakemisto</a> > 
         <a href="/kategoriat/{{$business->category->id}}">{{$business->category->name}}</a> >
         {{$business->name}}
+        </div>
     </div>
 </div>
 <div class="row">
