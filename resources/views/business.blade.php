@@ -5,16 +5,19 @@
 <div class="row">
     <div class="col-md-12">
 
-        <h2>{{ $business->name }}</h2>
+        <h1>{{ $business->name }}</h1>
+        <a href="/">Palveluhakemisto</a> > 
+        <a href="/kategoriat/{{$business->category->id}}">{{$business->category->name}}</a> >
+        {{$business->name}}
     </div>
 </div>
 <div class="row">
 
     <div class="col-md-4">
         <div class="infobox">
-            <h3>{{ $business->name }}</h3>
+            <h1>{{ $business->name }}</h1>
             <p>Kategoria: <a href="/kategoriat/{{$business->category->id}}">{{$business->category->name}}</a></p>
-
+            
             <p>
                 {{$business->streetAddress}}<br>
                 {{$business->zipCode}} {{$business->city}}<br>
@@ -25,7 +28,7 @@
             <p>
                 {{$business->description}}
             </p>
-            
+
             <p>
                 Päivitetty: {{$business->updated_at->format('d.m.Y')}}
             </p>
@@ -61,7 +64,7 @@
 
 
         function initialize() {
-        var sijainti = new google.maps.LatLng({{$business->latitude}}, {{$business->longitude}}, false);
+        var sijainti = new google.maps.LatLng({{$blat}}, {{$blng}}, false);
                 var mapOptions = {
                 center: sijainti,
                         zoom: 14

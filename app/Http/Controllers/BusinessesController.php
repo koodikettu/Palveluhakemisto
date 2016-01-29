@@ -37,8 +37,11 @@ class BusinessesController extends Controller {
     public function show($id) {
 
         $business = Business::findOrFail($id);
+        
+        $blat=$business->latitude;
+        $blng=$business->longitude;
 
-        return view('business', compact('business'));
+        return view('business', compact('business', 'blat', 'blng'));
     }
 
     public function edit($id) {

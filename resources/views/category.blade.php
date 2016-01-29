@@ -6,7 +6,8 @@
     <div class="col-md-12">
         <div class="infobox">
 
-            <h1><a href="/">Palveluhakemisto</a>: {{ $category->name }}</h1>
+            <h1>{{ $category->name }}</h1>
+            <a href="/">Palveluhakemisto</a> > {{ $category->name }}
         </div>
     </div>
 </div>
