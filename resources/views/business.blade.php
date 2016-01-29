@@ -15,7 +15,7 @@
 
     <div class="col-md-4">
         <div class="infobox">
-            <h1>{{ $business->name }}</h1>
+            <h3>{{ $business->name }}</h3>
             <p>Kategoria: <a href="/kategoriat/{{$business->category->id}}">{{$business->category->name}}</a></p>
             
             <p>
